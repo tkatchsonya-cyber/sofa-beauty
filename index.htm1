@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fffaf3">
+<title>SOFA · brows & lashes</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+:root{
+  --cream:#fffaf3;
+  --pink:#ff8fc7;
+  --blue:#79dcff;
+  --yellow:#ffe45c;
+  --red:#ff6262;
+  --green:#b9f36b;
+  --black:#171717;
+  --white:#fff;
+}
+
+*{box-sizing:border-box}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--black);
+  font-family:Manrope,Arial,sans-serif;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1120px,calc(100% - 32px));
+  margin:auto;
+}
+
+section{
+  padding:90px 0;
+  position:relative;
+}
+
+.tag{
+  display:inline-block;
+  padding:9px 15px;
+  border:2px solid var(--black);
+  border-radius:100px;
+  background:var(--yellow);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  box-shadow:4px 4px 0 var(--black);
+  transform:rotate(-2deg);
+}
+
+h2{
+  font-size:clamp(48px,9vw,100px);
+  line-height:.85;
+  letter-spacing:-.07em;
+  margin:25px 0;
+  font-weight:800;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:35px 0 60px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.small-intro{
+  font-size:14px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.logo{
+  font-size:clamp(75px,13vw,155px);
+  line-height:.75;
+  letter-spacing:-.1em;
+  margin:0;
+  font-weight:800;
+}
+
+.subtitle{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin:20px 0 28px;
+}
+
+.hero-text{
+  font-size:clamp(20px,3vw,30px);
+  line-height:1.15;
+  font-weight:700;
+  max-width:620px;
+}
+
+.location{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:25px 0;
+}
+
+.location span{
+  padding:8px 13px;
+  border:1.5px solid var(--black);
+  background:white;
+  border-radius:100px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.main-button{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:55px;
+  padding:14px 28px;
+  border:2px solid var(--black);
+  border-radius:100px;
+  background:var(--pink);
+  box-shadow:6px 6px 0 var(--black);
+  font-size:14px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.main-button:hover{
+  transform:translate(3px,3px);
+  box-shadow:2px 2px 0 var(--black);
+}
+
+.socials{
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.social{
+  width:83px;
+  height:83px;
+  border:2px solid var(--black);
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  font-weight:800;
+  box-shadow:5px 5px 0 var(--black);
+  transition:.25s;
+}
+
+.social:hover{
+  transform:translateY(-7px) rotate(-6deg);
+}
+
+.social:nth-child(1){background:var(--pink)}
+.social:nth-child(2){background:var(--blue)}
+.social:nth-child(3){background:var(--yellow)}
+.social:nth-child(4){background:var(--red);color:white}
+
+.social-icon{
+  font-size:22px;
+  margin-bottom:3px;
+}
+
+.hero-photo-wrap{
+  position:relative;
+  width:min(460px,90vw);
+  aspect-ratio:4/5;
+  margin:auto;
+}
+
+.hero-photo{
+  position:absolute;
+  inset:18px;
+  border:3px solid var(--black);
+  border-radius:47% 53% 50% 50%;
+  overflow:hidden;
+  background:var(--pink);
+  transform:rotate(3deg);
+  box-shadow:12px 12px 0 var(--black);
+}
+
+.hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.sticker{
+  position:absolute;
+  z-index:4;
+  padding:10px 15px;
+  border:2px solid var(--black);
+  border-radius:100px;
+  font-size:12px;
+  font-weight:800;
+  box-shadow:4px 4px 0 var(--black);
+  animation:float 4s ease-in-out infinite;
+}
+
+.s1{right:-3%;top:5%;background:var(--yellow);transform:rotate(7deg)}
+.s2{left:-5%;top:35%;background:var(--blue);transform:rotate(-7deg);animation-delay:.8s}
+.s3{right:-3%;bottom:17%;background:var(--pink);transform:rotate(-5deg);animation-delay:1.5s}
+.s4{left:3%;bottom:3%;background:var(--green);transform:rotate(5deg);animation-delay:2s}
+
+@keyframes float{
+  0%,100%{translate:0 0}
+  50%{translate:0 -10px}
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:var(--blue);
+  border-top:3px solid var(--black);
+  border-bottom:3px solid var(--black);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-photo{
+  aspect-ratio:1;
+  border:3px solid var(--black);
+  border-radius:40px;
+  overflow:hidden;
+  background:var(--yellow);
+  box-shadow:11px 11px 0 var(--black);
+  transform:rotate(-3deg);
+}
+
+.about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.text{
+  font-size:18px;
+  line-height:1.55;
+  max-width:650px;
+}
+
+.note{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 17px;
+  background:var(--yellow);
+  border:2px solid var(--black);
+  border-radius:15px;
+  box-shadow:4px 4px 0 var(--black);
+  font-size:13px;
+  font-weight:800;
+  transform:rotate(2deg);
+}
+
+/* ================= WORKS ================= */
+
+.works-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:16px;
+  margin-top:40px;
+}
+
+.work{
+  min-height:330px;
+  border:3px solid var(--black);
+  border-radius:28px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.work:hover{
+  transform:rotate(-2deg) scale(1.025);
+}
+
+.work:nth-child(1){grid-column:span 7}
+.work:nth-child(2){grid-column:span 5}
+.work:nth-child(3){grid-column:span 5}
+.work:nth-child(4){grid-column:span 7}
+
+.work img{
+  width:100%;
+  height:100%;
+  min-height:330px;
+  object-fit:cover;
+  display:block;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  background:var(--pink);
+  border-top:3px solid var(--black);
+  border-bottom:3px solid var(--black);
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+  margin-top:40px;
+}
+
+.card{
+  background:var(--cream);
+  border:3px solid var(--black);
+  border-radius:28px;
+  padding:27px;
+  box-shadow:7px 7px 0 var(--black);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-7px) rotate(1deg);
+}
+
+.card h3{
+  margin:0 0 13px;
+  font-size:21px;
+}
+
+.price{
+  margin-top:20px;
+  font-size:30px;
+  font-weight:800;
+}
+
+.discount{
+  display:inline-block;
+  margin-top:35px;
+  padding:17px 22px;
+  background:var(--yellow);
+  border:3px solid var(--black);
+  border-radius:20px;
+  box-shadow:6px 6px 0 var(--black);
+  font-size:20px;
+  font-weight:800;
+  transform:rotate(-2deg);
+}
+
+/* ================= FRIEND ================= */
+
+.friend{
+  background:var(--red);
+  color:white;
+  border-bottom:3px solid var(--black);
+  text-align:center;
+}
+
+.friend h2{
+  font-size:clamp(55px,11vw,120px);
+}
+
+.friend-text{
+  max-width:650px;
+  margin:0 auto 30px;
+  font-size:19px;
+  line-height:1.45;
+  font-weight:600;
+}
+
+.friend .main-button{
+  background:var(--yellow);
+  color:var(--black);
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+  text-align:center;
+}
+
+.booking .text{
+  margin:auto;
+}
+
+.address{
+  margin:25px auto;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.6;
+}
+
+.footer-socials{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:40px;
+}
+
+.footer-socials a{
+  padding:10px 17px;
+  border:2px solid var(--black);
+  border-radius:100px;
+  background:white;
+  font-weight:800;
+  font-size:13px;
+  transition:.2s;
+}
+
+.footer-socials a:hover{
+  background:var(--yellow);
+  transform:rotate(-3deg);
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+  section{
+    padding:65px 0;
+  }
+
+  .container{
+    width:calc(100% - 24px);
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:30px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .logo{
+    font-size:24vw;
+  }
+
+  .subtitle{
+    font-size:15px;
+  }
+
+  .hero-text{
+    font-size:20px;
+  }
+
+  .socials{
+    justify-content:center;
+  }
+
+  .social{
+    width:72px;
+    height:72px;
+    font-size:10px;
+  }
+
+  .social-icon{
+    font-size:19px;
+  }
+
+  .hero-photo-wrap{
+    width:min(390px,90vw);
+  }
+
+  .s1{right:0}
+  .s2{left:0}
+
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .about-photo{
+    max-width:390px;
+    margin:auto;
+  }
+
+  h2{
+    font-size:15vw;
+  }
+
+  .works-grid{
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+  }
+
+  .work,
+  .work:nth-child(1),
+  .work:nth-child(2),
+  .work:nth-child(3),
+  .work:nth-child(4){
+    grid-column:span 1;
+    min-height:220px;
+    border-radius:20px;
+  }
+
+  .work:nth-child(1),
+  .work:nth-child(4){
+    grid-column:span 2;
+  }
+
+  .work img{
+    min-height:220px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:23px;
+  }
+
+  .main-button{
+    width:100%;
+  }
+
+  .friend-text{
+    font-size:17px;
+  }
+
+}
+</style>
+</head>
+
+
+<body>
+
+<div id="site">
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+<div class="container">
+
+<div class="hero-grid">
+
+<div class="reveal">
+
+<div class="small-intro">
+Привет, это моя beauty-вселенная 👀
+</div>
+
+<h1 class="logo">SOFA</h1>
+
+<div class="subtitle">
+brows & lashes
+</div>
+
+<div class="hero-text">
+Красивые брови и ресницы,
+которые выглядят как свои,
+только лучше ✨
+</div>
+
+<div class="location">
+<span>📍 Санкт-Петербург</span>
+<span>🚇 Чернышевская</span>
+</div>
+
+<a class="main-button"
+href="https://t.me/vrodes"
+target="_blank">
+ЗАПИСАТЬСЯ 💌
+</a>
+
+<div class="socials">
+
+<a class="social"
+href="https://www.instagram.com/sofa.beauty.spb"
+target="_blank">
+<div class="social-icon">◎</div>
+Instagram
+</a>
+
+<a class="social"
+href="https://vk.ru/sofia.beauty"
+target="_blank">
+<div class="social-icon">VK</div>
+VK
+</a>
+
+<a class="social"
+href="https://t.me/vrodes"
+target="_blank">
+<div class="social-icon">✈</div>
+Telegram
+</a>
+
+<a class="social"
+href="#works">
+<div class="social-icon">♡</div>
+Работы
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-photo-wrap reveal">
+
+<div class="hero-photo">
+
+<!-- ГЛАВНОЕ ФОТО -->
+<img
+src="https://placehold.co/800x1000/ff8fc7/171717?text=YOUR+PHOTO"
+alt="Софа">
+</div>
+
+<div class="sticker s1">brows ✨</div>
+<div class="sticker s2">СПб ♡</div>
+<div class="sticker s3">lashes 🪩</div>
+<div class="sticker s4">beauty mood ✦</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-photo reveal">
+
+<!-- ФОТО О СЕБЕ -->
+<img
+src="https://placehold.co/800x800/ffe45c/171717?text=ABOUT+ME"
+alt="Софа">
+</div>
+
+<div class="reveal">
+
+<span class="tag">обо мне 👋</span>
+
+<h2>
+Привет,<br>
+я Софа!
+</h2>
+
+<div class="text">
+
+Я мастер по бровям и ресницам и просто обожаю превращать обычное
+«ну вроде нормально» в
+<strong>«ВАУ, это мои брови?!»</strong> 😄
+
+<br><br>
+
+Люблю аккуратную форму, красивые оттенки и тот самый эффект,
+когда результат выглядит естественно, но лицо сразу становится
+выразительнее.
+
+</div>
+
+<div class="note">
+да, я тот человек, который замечает чужие брови в метро 👀
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= WORKS ================= -->
+
+<section id="works">
+
+<div class="container">
+
+<div class="reveal">
+
+<span class="tag">портфолио 📸</span>
+
+<h2>
+МОИ<br>
+РАБОТЫ
+</h2>
+
+<div class="text">
+Здесь лучше один раз увидеть, чем сто раз прочитать ✨
+</div>
+
+</div>
+
+
+<div class="works-grid">
+
+<div class="work reveal">
+<img
+src="https://placehold.co/1000x700/72dcff/171717?text=WORK+01"
+alt="Работа Софы">
+</div>
+
+<div class="work reveal">
+<img
+src="https://placehold.co/700x900/ff8fc7/171717?text=WORK+02"
+alt="Работа Софы">
+</div>
+
+<div class="work reveal">
+<img
+src="https://placehold.co/700x900/ffe45c/171717?text=WORK+03"
+alt="Работа Софы">
+</div>
+
+<div class="work reveal">
+<img
+src="https://placehold.co/1000x700/ff6262/ffffff?text=WORK+04"
+alt="Работа Софы">
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services">
+
+<div class="container">
+
+<div class="reveal">
+
+<span class="tag">услуги & цены 💅</span>
+
+<h2>
+ЧТО БУДЕМ<br>
+ДЕЛАТЬ?
+</h2>
+
+</div>
+
+
+<div class="service-grid">
+
+<div class="card reveal">
+
+<h3>🤎 Брови</h3>
+
+<strong>
+Коррекция + окрашивание хной/краской + уход
+</strong>
+
+<div class="price">1700 ₽</div>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>✨ Брови + ламинирование</h3>
+
+<strong>
+Коррекция + окрашивание краской +
+ламинирование + уход
+</strong>
+
+<div class="price">2000 ₽</div>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>🖤 Ресницы</h3>
+
+<strong>
+Окрашивание ресниц
+</strong>
+
+<div class="price">500 ₽</div>
+
+</div>
+
+
+<div class="card reveal">
+
+<h3>🪩 Ресницы + ламинирование</h3>
+
+<strong>
+Окрашивание + ламинирование ресниц
+</strong>
+
+<div class="price">1500 ₽</div>
+
+</div>
+
+</div>
+
+
+<div class="discount reveal">
+−10% на знакомство с мастером ✨
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= FRIEND ================= -->
+
+<section class="friend">
+
+<div class="container">
+
+<div class="reveal">
+
+<span class="tag">секретик 🤫</span>
+
+<h2>
+ПРИВЕДИ<br>
+ПОДРУГУ
+</h2>
+
+<div class="friend-text">
+
+Подруга приходит по рекомендации от тебя —
+<strong>ты получаешь −15% на следующую процедуру.</strong>
+
+<br><br>
+
+Больше подруг → больше скидка 😄
+
+</div>
+
+<a class="main-button"
+href="https://t.me/vrodes"
+target="_blank">
+ХОЧУ ЗАПИСАТЬСЯ 💌
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking">
+
+<div class="container">
+
+<div class="reveal">
+
+<span class="tag">до встречи 👋</span>
+
+<h2>
+Ну что,<br>
+знакомимся?
+</h2>
+
+<div class="text">
+Брови или ресницы — выбирай своё.
+А я позабочусь о красивом результате 🤍
+</div>
+
+<div class="address">
+
+📍 Уютный кабинет в центре Санкт-Петербурга<br>
+ул. Кирочная, 24<br>
+🚇 м. Чернышевская
+
+</div>
+
+<a class="main-button"
+href="https://t.me/vrodes"
+target="_blank">
+ЗАПИСАТЬСЯ В TELEGRAM →
+</a>
+
+<div class="footer-socials">
+
+<a href="https://www.instagram.com/sofa.beauty.spb"
+target="_blank">
+Instagram
+</a>
+
+<a href="https://vk.ru/sofia.beauty"
+target="_blank">
+VK
+</a>
+
+<a href="https://t.me/vrodes"
+target="_blank">
+Telegram
+</a>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+</div>
+
+
+<script>
+
+const reveals =
+document.querySelectorAll('.reveal');
+
+const observer =
+new IntersectionObserver(
+(entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+},
+{
+threshold:.12
+});
+
+reveals.forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
