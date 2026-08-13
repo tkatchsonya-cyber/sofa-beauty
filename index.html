@@ -20,7 +20,9 @@
   --white:#fff;
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
 html{
   scroll-behavior:smooth;
@@ -34,9 +36,19 @@ body{
   overflow-x:hidden;
 }
 
+body,
+a,
+button{
+  -webkit-tap-highlight-color:transparent;
+}
+
 a{
   color:inherit;
   text-decoration:none;
+}
+
+button{
+  font:inherit;
 }
 
 .container{
@@ -61,6 +73,13 @@ section{
   letter-spacing:.08em;
   box-shadow:4px 4px 0 var(--black);
   transform:rotate(-2deg);
+  cursor:pointer;
+  user-select:none;
+  transition:.2s;
+}
+
+.tag:active{
+  transform:rotate(-2deg) scale(.94);
 }
 
 h2{
@@ -71,7 +90,13 @@ h2{
   font-weight:800;
 }
 
-/* ================= HERO ================= */
+.text{
+  font-size:18px;
+  line-height:1.55;
+  max-width:650px;
+}
+
+/* HERO */
 
 .hero{
   min-height:100vh;
@@ -204,12 +229,14 @@ h2{
   background:var(--pink);
   transform:rotate(3deg);
   box-shadow:12px 12px 0 var(--black);
+  cursor:pointer;
 }
 
 .hero-photo img{
   width:100%;
   height:100%;
   object-fit:cover;
+  display:block;
 }
 
 .sticker{
@@ -224,17 +251,43 @@ h2{
   animation:float 4s ease-in-out infinite;
 }
 
-.s1{right:-3%;top:5%;background:var(--yellow);transform:rotate(7deg)}
-.s2{left:-5%;top:35%;background:var(--blue);transform:rotate(-7deg);animation-delay:.8s}
-.s3{right:-3%;bottom:17%;background:var(--pink);transform:rotate(-5deg);animation-delay:1.5s}
-.s4{left:3%;bottom:3%;background:var(--green);transform:rotate(5deg);animation-delay:2s}
+.s1{
+  right:-3%;
+  top:5%;
+  background:var(--yellow);
+  transform:rotate(7deg);
+}
+
+.s2{
+  left:-5%;
+  top:35%;
+  background:var(--blue);
+  transform:rotate(-7deg);
+  animation-delay:.8s;
+}
+
+.s3{
+  right:-3%;
+  bottom:17%;
+  background:var(--pink);
+  transform:rotate(-5deg);
+  animation-delay:1.5s;
+}
+
+.s4{
+  left:3%;
+  bottom:3%;
+  background:var(--green);
+  transform:rotate(5deg);
+  animation-delay:2s;
+}
 
 @keyframes float{
   0%,100%{translate:0 0}
   50%{translate:0 -10px}
 }
 
-/* ================= ABOUT ================= */
+/* ABOUT */
 
 .about{
   background:var(--blue);
@@ -265,12 +318,6 @@ h2{
   object-fit:cover;
 }
 
-.text{
-  font-size:18px;
-  line-height:1.55;
-  max-width:650px;
-}
-
 .note{
   display:inline-block;
   margin-top:25px;
@@ -282,9 +329,11 @@ h2{
   font-size:13px;
   font-weight:800;
   transform:rotate(2deg);
+  cursor:pointer;
+  user-select:none;
 }
 
-/* ================= WORKS ================= */
+/* WORKS */
 
 .works-grid{
   display:grid;
@@ -318,7 +367,7 @@ h2{
   display:block;
 }
 
-/* ================= SERVICES ================= */
+/* SERVICES */
 
 .services{
   background:var(--pink);
@@ -368,9 +417,16 @@ h2{
   font-size:20px;
   font-weight:800;
   transform:rotate(-2deg);
+  cursor:pointer;
+  user-select:none;
+  transition:.2s;
 }
 
-/* ================= FRIEND ================= */
+.discount:active{
+  transform:rotate(-2deg) scale(.96);
+}
+
+/* FRIEND */
 
 .friend{
   background:var(--red);
@@ -396,7 +452,7 @@ h2{
   color:var(--black);
 }
 
-/* ================= BOOKING ================= */
+/* BOOKING */
 
 .booking{
   text-align:center;
@@ -436,7 +492,7 @@ h2{
   transform:rotate(-3deg);
 }
 
-/* ================= ANIMATION ================= */
+/* REVEAL */
 
 .reveal{
   opacity:0;
@@ -449,7 +505,112 @@ h2{
   transform:translateY(0);
 }
 
-/* ================= MOBILE ================= */
+/* HEARTS */
+
+.heart{
+  position:fixed;
+  z-index:9999;
+  pointer-events:none;
+  font-size:24px;
+  animation:heartUp 1.4s ease-out forwards;
+}
+
+@keyframes heartUp{
+  0%{
+    opacity:1;
+    transform:translate(0,0) scale(.5) rotate(0);
+  }
+
+  100%{
+    opacity:0;
+    transform:translate(var(--x),-150px) scale(1.25) rotate(var(--r));
+  }
+}
+
+/* HAND */
+
+.wave-hand{
+  position:fixed;
+  z-index:9999;
+  pointer-events:none;
+  font-size:75px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%) scale(0);
+  opacity:0;
+}
+
+.wave-hand.show{
+  animation:wave .9s ease forwards;
+}
+
+@keyframes wave{
+  0%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.3) rotate(-25deg);
+  }
+
+  25%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1) rotate(15deg);
+  }
+
+  50%{
+    transform:translate(-50%,-50%) scale(1) rotate(-15deg);
+  }
+
+  75%{
+    transform:translate(-50%,-50%) scale(1) rotate(12deg);
+  }
+
+  100%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.9) rotate(0);
+  }
+}
+
+/* TRAIN */
+
+.train{
+  position:fixed;
+  z-index:9999;
+  pointer-events:none;
+  left:-130px;
+  top:62%;
+  font-size:48px;
+}
+
+.train.go{
+  animation:trainRide 2.3s linear forwards;
+}
+
+@keyframes trainRide{
+  from{left:-130px}
+  to{left:calc(100vw + 130px)}
+}
+
+/* FLASH */
+
+.flash{
+  position:fixed;
+  inset:0;
+  z-index:9998;
+  pointer-events:none;
+  background:white;
+  opacity:0;
+}
+
+.flash.go{
+  animation:cameraFlash .55s ease;
+}
+
+@keyframes cameraFlash{
+  0%{opacity:0}
+  35%{opacity:.95}
+  100%{opacity:0}
+}
+
+/* MOBILE */
 
 @media(max-width:700px){
 
@@ -501,8 +662,13 @@ h2{
     width:min(390px,90vw);
   }
 
-  .s1{right:0}
-  .s2{left:0}
+  .s1{
+    right:0;
+  }
+
+  .s2{
+    left:0;
+  }
 
   .about-grid{
     grid-template-columns:1fr;
@@ -558,19 +724,28 @@ h2{
     font-size:17px;
   }
 
+  .wave-hand{
+    font-size:65px;
+  }
+
+  .train{
+    top:68%;
+  }
 }
 </style>
 </head>
 
-
 <body>
 
-<div id="site">
+<div class="wave-hand" id="waveHand">👋</div>
+<div class="train" id="train">🚂</div>
+<div class="flash" id="flash"></div>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
+
 <div class="container">
 
 <div class="hero-grid">
@@ -590,7 +765,7 @@ brows & lashes
 <div class="hero-text">
 Красивые брови и ресницы,
 которые выглядят как свои,
-только лучше ✨ 
+только лучше ✨
 </div>
 
 <div class="location">
@@ -598,39 +773,58 @@ brows & lashes
 <span>🚇 Чернышевская</span>
 </div>
 
-<a class="main-button"
-href="https://t.me/vrodes"
-target="_blank">
-ЗАПИСАТЬСЯ 💌
+<!-- DIKIDI -->
+
+<a
+class="main-button"
+href="https://dikidi.net/2126919?p=0.pi"
+target="_blank"
+rel="noopener">
+ЗАПИСАТЬСЯ ONLINE →
 </a>
 
 <div class="socials">
 
-<a class="social"
+<a
+class="social"
 href="https://www.instagram.com/sofa.beauty.spb"
-target="_blank">
+target="_blank"
+rel="noopener">
+
 <div class="social-icon">◎</div>
 Instagram
+
 </a>
 
-<a class="social"
+<a
+class="social"
 href="https://vk.ru/sofia.beauty"
-target="_blank">
+target="_blank"
+rel="noopener">
+
 <div class="social-icon">VK</div>
 VK
+
 </a>
 
-<a class="social"
+<a
+class="social"
 href="https://t.me/vrodes"
-target="_blank">
+target="_blank"
+rel="noopener">
+
 <div class="social-icon">✈</div>
 Telegram
+
 </a>
 
-<a class="social"
+<a
+class="social"
 href="#works">
+
 <div class="social-icon">♡</div>
 Работы
+
 </a>
 
 </div>
@@ -640,12 +834,14 @@ href="#works">
 
 <div class="hero-photo-wrap reveal">
 
-<div class="hero-photo">
+<div
+class="hero-photo"
+id="heroPhoto">
 
-<!-- ГЛАВНОЕ ФОТО -->
 <img
 src="images/me.jpg"
 alt="Софа">
+
 </div>
 
 <div class="sticker s1">brows ✨</div>
@@ -660,7 +856,7 @@ alt="Софа">
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 
 <section class="about">
 
@@ -670,15 +866,17 @@ alt="Софа">
 
 <div class="about-photo reveal">
 
-<!-- ФОТО О СЕБЕ -->
 <img
 src="images/about.jpg"
 alt="Софа">
+
 </div>
 
 <div class="reveal">
 
-<span class="tag">обо мне 👋</span>
+<span class="tag" id="aboutTag">
+обо мне 👋
+</span>
 
 <h2>
 Привет,<br>
@@ -699,7 +897,7 @@ alt="Софа">
 
 </div>
 
-<div class="note">
+<div class="note" id="metroNote">
 да, я тот человек, который замечает чужие брови в метро 👀
 </div>
 
@@ -710,7 +908,7 @@ alt="Софа">
 </section>
 
 
-<!-- ================= WORKS ================= -->
+<!-- WORKS -->
 
 <section id="works">
 
@@ -718,7 +916,9 @@ alt="Софа">
 
 <div class="reveal">
 
-<span class="tag">портфолио 📸</span>
+<span class="tag" id="portfolioTag">
+портфолио 📸
+</span>
 
 <h2>
 МОИ<br>
@@ -736,25 +936,25 @@ alt="Софа">
 
 <div class="work reveal">
 <img
-src="images/work1.jpg"
+src="https://placehold.co/1000x700/72dcff/171717?text=WORK+01"
 alt="Работа Софы">
 </div>
 
 <div class="work reveal">
 <img
-src="images/work2.jpg"
+src="https://placehold.co/700x900/ff8fc7/171717?text=WORK+02"
 alt="Работа Софы">
 </div>
 
 <div class="work reveal">
 <img
-src="images/work3.jpg"
+src="https://placehold.co/700x900/ffe45c/171717?text=WORK+03"
 alt="Работа Софы">
 </div>
 
 <div class="work reveal">
 <img
-src="images/work4.jpg"
+src="https://placehold.co/1000x700/ff6262/ffffff?text=WORK+04"
 alt="Работа Софы">
 </div>
 
@@ -764,7 +964,7 @@ alt="Работа Софы">
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- SERVICES -->
 
 <section class="services">
 
@@ -772,7 +972,9 @@ alt="Работа Софы">
 
 <div class="reveal">
 
-<span class="tag">услуги & цены 💅</span>
+<span class="tag">
+услуги & цены 💅
+</span>
 
 <h2>
 ЧТО БУДЕМ<br>
@@ -839,15 +1041,23 @@ alt="Работа Софы">
 </div>
 
 
-<div class="discount reveal">
+<!-- TELEGRAM -->
+
+<a
+class="discount reveal"
+href="https://t.me/vrodes"
+target="_blank"
+rel="noopener">
+
 −10% на знакомство с мастером ✨
-</div>
+
+</a>
 
 </div>
 </section>
 
 
-<!-- ================= FRIEND ================= -->
+<!-- FRIEND -->
 
 <section class="friend">
 
@@ -855,7 +1065,9 @@ alt="Работа Софы">
 
 <div class="reveal">
 
-<span class="tag">секретик 🤫</span>
+<span class="tag">
+секретик 🤫
+</span>
 
 <h2>
 ПРИВЕДИ<br>
@@ -873,10 +1085,14 @@ alt="Работа Софы">
 
 </div>
 
-<a class="main-button"
-href="https://t.me/vrodes"
-target="_blank">
+<a
+class="main-button"
+href="https://dikidi.net/2126919?p=0.pi"
+target="_blank"
+rel="noopener">
+
 ХОЧУ ЗАПИСАТЬСЯ 💌
+
 </a>
 
 </div>
@@ -885,7 +1101,7 @@ target="_blank">
 </section>
 
 
-<!-- ================= BOOKING ================= -->
+<!-- BOOKING -->
 
 <section class="booking">
 
@@ -893,7 +1109,9 @@ target="_blank">
 
 <div class="reveal">
 
-<span class="tag">до встречи 👋</span>
+<span class="tag" id="meetTag">
+до встречи 👋
+</span>
 
 <h2>
 Ну что,<br>
@@ -901,8 +1119,10 @@ target="_blank">
 </h2>
 
 <div class="text">
+
 Брови или ресницы — выбирай своё.
 А я позабочусь о красивом результате 🤍
+
 </div>
 
 <div class="address">
@@ -913,26 +1133,36 @@ target="_blank">
 
 </div>
 
-<a class="main-button"
-href="https://t.me/vrodes"
-target="_blank">
-ЗАПИСАТЬСЯ В TELEGRAM →
+<a
+class="main-button"
+href="https://dikidi.net/2126919?p=0.pi"
+target="_blank"
+rel="noopener">
+
+ЗАПИСАТЬСЯ ONLINE →
+
 </a>
 
 <div class="footer-socials">
 
-<a href="https://www.instagram.com/sofa.beauty.spb"
-target="_blank">
+<a
+href="https://www.instagram.com/sofa.beauty.spb"
+target="_blank"
+rel="noopener">
 Instagram
 </a>
 
-<a href="https://vk.ru/sofia.beauty"
-target="_blank">
+<a
+href="https://vk.ru/sofia.beauty"
+target="_blank"
+rel="noopener">
 VK
 </a>
 
-<a href="https://t.me/vrodes"
-target="_blank">
+<a
+href="https://t.me/vrodes"
+target="_blank"
+rel="noopener">
 Telegram
 </a>
 
@@ -944,10 +1174,9 @@ Telegram
 </section>
 
 
-</div>
-
-
 <script>
+
+/* Появление элементов */
 
 const reveals =
 document.querySelectorAll('.reveal');
@@ -967,6 +1196,113 @@ threshold:.12
 
 reveals.forEach(el=>{
 observer.observe(el);
+});
+
+
+/* ❤️ СЕРДЕЧКИ */
+
+const heroPhoto =
+document.getElementById('heroPhoto');
+
+heroPhoto.addEventListener('click',function(){
+
+const rect =
+heroPhoto.getBoundingClientRect();
+
+for(let i=0;i<12;i++){
+
+const heart =
+document.createElement('div');
+
+heart.className='heart';
+
+heart.innerHTML =
+['❤️','🩷','💕','💗'][Math.floor(Math.random()*4)];
+
+heart.style.left =
+(rect.left + rect.width/2) + 'px';
+
+heart.style.top =
+(rect.top + rect.height/2) + 'px';
+
+heart.style.setProperty(
+'--x',
+((Math.random()-.5)*180)+'px'
+);
+
+heart.style.setProperty(
+'--r',
+((Math.random()-.5)*50)+'deg'
+);
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1500);
+
+}
+
+});
+
+
+/* 👋 МАШУЩАЯ РУКА */
+
+function waveHand(){
+
+const hand =
+document.getElementById('waveHand');
+
+hand.classList.remove('show');
+
+void hand.offsetWidth;
+
+hand.classList.add('show');
+
+}
+
+document
+.getElementById('aboutTag')
+.addEventListener('click',waveHand);
+
+document
+.getElementById('meetTag')
+.addEventListener('click',waveHand);
+
+
+/* 🚂 ПОЕЗД */
+
+document
+.getElementById('metroNote')
+.addEventListener('click',function(){
+
+const train =
+document.getElementById('train');
+
+train.classList.remove('go');
+
+void train.offsetWidth;
+
+train.classList.add('go');
+
+});
+
+
+/* 📸 ВСПЫШКА */
+
+document
+.getElementById('portfolioTag')
+.addEventListener('click',function(){
+
+const flash =
+document.getElementById('flash');
+
+flash.classList.remove('go');
+
+void flash.offsetWidth;
+
+flash.classList.add('go');
+
 });
 
 </script>
