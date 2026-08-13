@@ -8,202 +8,204 @@
 <title>SOFA · brows & lashes</title>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
 :root{
---cream:#fffaf3;
---pink:#ff8fc7;
---blue:#79dcff;
---yellow:#ffe45c;
---red:#ff6262;
---green:#b9f36b;
---black:#171717;
---white:#ffffff;
+  --cream:#fffaf3;
+  --pink:#ff8fc7;
+  --blue:#79dcff;
+  --yellow:#ffe45c;
+  --red:#ff6262;
+  --green:#b9f36b;
+  --black:#171717;
+  --white:#fff;
 }
 
 *{
-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-margin:0;
-background:var(--cream);
-color:var(--black);
-font-family:Manrope,Arial,sans-serif;
-overflow-x:hidden;
+  margin:0;
+  background:var(--cream);
+  color:var(--black);
+  font-family:Manrope,Arial,sans-serif;
+  overflow-x:hidden;
 }
 
 body,
 a,
 button{
--webkit-tap-highlight-color:transparent;
+  -webkit-tap-highlight-color:transparent;
 }
 
 a{
-color:inherit;
-text-decoration:none;
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
 }
 
 .container{
-width:min(1120px,calc(100% - 32px));
-margin:auto;
+  width:min(1120px,calc(100% - 32px));
+  margin:auto;
 }
 
 section{
-padding:95px 0;
-position:relative;
+  padding:90px 0;
+  position:relative;
 }
 
 h1,h2,h3,p{
-margin-top:0;
+  margin-top:0;
 }
 
 h2{
-font-size:clamp(50px,9vw,105px);
-line-height:.86;
-letter-spacing:-.075em;
-font-weight:800;
-margin:25px 0;
+  font-size:clamp(50px,9vw,105px);
+  line-height:.86;
+  letter-spacing:-.075em;
+  font-weight:800;
+  margin:25px 0;
 }
 
 .text{
-font-size:18px;
-line-height:1.55;
-max-width:650px;
+  font-size:18px;
+  line-height:1.55;
+  max-width:650px;
 }
 
 .tag{
-display:inline-block;
-padding:9px 15px;
-border:2px solid var(--black);
-border-radius:100px;
-background:var(--yellow);
-font-size:12px;
-font-weight:800;
-text-transform:uppercase;
-letter-spacing:.08em;
-box-shadow:4px 4px 0 var(--black);
-transform:rotate(-2deg);
-cursor:pointer;
-user-select:none;
-transition:.2s;
+  display:inline-block;
+  padding:9px 15px;
+  border:2px solid var(--black);
+  border-radius:100px;
+  background:var(--yellow);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  box-shadow:4px 4px 0 var(--black);
+  transform:rotate(-2deg);
+  cursor:pointer;
+  user-select:none;
+  transition:.2s;
 }
 
 .tag:active{
-transform:rotate(-2deg) scale(.94);
+  transform:rotate(-2deg) scale(.94);
 }
 
-
-/* ================= HERO ================= */
+/* ---------------- HERO ---------------- */
 
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-padding:35px 0 70px;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding:35px 0 65px;
 }
 
 .hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:55px;
-align-items:center;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
 }
 
 .small-intro{
-font-size:14px;
-font-weight:800;
-margin-bottom:20px;
+  font-size:14px;
+  font-weight:800;
+  margin-bottom:20px;
 }
 
 .logo{
-font-size:clamp(80px,14vw,160px);
-line-height:.72;
-letter-spacing:-.11em;
-font-weight:800;
-margin:0;
+  font-size:clamp(80px,14vw,160px);
+  line-height:.72;
+  letter-spacing:-.11em;
+  font-weight:800;
+  margin:0;
 }
 
 .subtitle{
-font-size:20px;
-font-weight:800;
-letter-spacing:.15em;
-text-transform:uppercase;
-margin:22px 0 28px;
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin:22px 0 28px;
 }
 
 .hero-text{
-font-size:clamp(21px,3vw,30px);
-line-height:1.13;
-font-weight:700;
-max-width:620px;
+  font-size:clamp(21px,3vw,30px);
+  line-height:1.13;
+  font-weight:700;
+  max-width:620px;
 }
 
 .location{
-display:flex;
-flex-wrap:wrap;
-gap:7px;
-margin:25px 0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:25px 0;
 }
 
 .location span{
-padding:8px 13px;
-border:1.5px solid var(--black);
-background:white;
-border-radius:100px;
-font-size:12px;
-font-weight:700;
+  padding:8px 13px;
+  border:1.5px solid var(--black);
+  background:white;
+  border-radius:100px;
+  font-size:12px;
+  font-weight:700;
 }
 
 .main-button{
-display:inline-flex;
-justify-content:center;
-align-items:center;
-min-height:55px;
-padding:14px 28px;
-border:2px solid var(--black);
-border-radius:100px;
-background:var(--pink);
-box-shadow:6px 6px 0 var(--black);
-font-size:14px;
-font-weight:800;
-transition:.25s;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-height:55px;
+  padding:14px 28px;
+  border:2px solid var(--black);
+  border-radius:100px;
+  background:var(--pink);
+  box-shadow:6px 6px 0 var(--black);
+  font-size:14px;
+  font-weight:800;
+  transition:.25s;
 }
 
 .main-button:hover{
-transform:translate(3px,3px);
-box-shadow:2px 2px 0 var(--black);
+  transform:translate(3px,3px);
+  box-shadow:2px 2px 0 var(--black);
 }
 
 .socials{
-display:flex;
-gap:13px;
-flex-wrap:wrap;
-margin-top:30px;
+  display:flex;
+  gap:13px;
+  flex-wrap:wrap;
+  margin-top:30px;
 }
 
 .social{
-width:83px;
-height:83px;
-border:2px solid var(--black);
-border-radius:50%;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-font-size:11px;
-font-weight:800;
-box-shadow:5px 5px 0 var(--black);
-transition:.3s;
+  width:83px;
+  height:83px;
+  border:2px solid var(--black);
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+  font-weight:800;
+  box-shadow:5px 5px 0 var(--black);
+  transition:.3s;
 }
 
 .social:hover{
-transform:translateY(-7px) rotate(-6deg);
+  transform:translateY(-7px) rotate(-6deg);
 }
 
 .social:nth-child(1){background:var(--pink)}
@@ -212,177 +214,197 @@ transform:translateY(-7px) rotate(-6deg);
 .social:nth-child(4){background:var(--red);color:white}
 
 .social-icon{
-font-size:22px;
-margin-bottom:3px;
+  font-size:22px;
+  margin-bottom:3px;
 }
 
-
-/* HERO PHOTO */
+/* PHOTO */
 
 .hero-photo-wrap{
-position:relative;
-width:min(460px,90vw);
-aspect-ratio:4/5;
-margin:auto;
+  position:relative;
+  width:min(460px,90vw);
+  aspect-ratio:4/5;
+  margin:auto;
+  transition:transform .2s ease-out;
 }
 
 .hero-photo{
-position:absolute;
-inset:18px;
-border:3px solid var(--black);
-border-radius:47% 53% 50% 50%;
-overflow:hidden;
-background:var(--pink);
-transform:rotate(3deg);
-box-shadow:12px 12px 0 var(--black);
-cursor:pointer;
+  position:absolute;
+  inset:18px;
+  border:3px solid var(--black);
+  border-radius:47% 53% 50% 50%;
+  overflow:hidden;
+  background:var(--pink);
+  transform:rotate(3deg);
+  box-shadow:12px 12px 0 var(--black);
+  cursor:pointer;
 }
 
 .hero-photo::after{
-content:"";
-position:absolute;
-width:80px;
-height:140%;
-background:rgba(255,255,255,.25);
-top:-20%;
-left:-120px;
-transform:rotate(20deg);
-transition:1s;
+  content:"";
+  position:absolute;
+  width:80px;
+  height:140%;
+  background:rgba(255,255,255,.28);
+  top:-20%;
+  left:-140px;
+  transform:rotate(20deg);
+  transition:1s;
 }
 
 .hero-photo:hover::after{
-left:130%;
+  left:130%;
 }
 
 .hero-photo img{
-width:100%;
-height:100%;
-object-fit:cover;
-display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
 .sticker{
-position:absolute;
-z-index:4;
-padding:10px 15px;
-border:2px solid var(--black);
-border-radius:100px;
-font-size:12px;
-font-weight:800;
-box-shadow:4px 4px 0 var(--black);
-animation:float 4s ease-in-out infinite;
+  position:absolute;
+  z-index:4;
+  padding:10px 15px;
+  border:2px solid var(--black);
+  border-radius:100px;
+  font-size:12px;
+  font-weight:800;
+  box-shadow:4px 4px 0 var(--black);
+  animation:float 4s ease-in-out infinite;
 }
 
 .s1{
-right:-3%;
-top:5%;
-background:var(--yellow);
-transform:rotate(7deg);
+  right:-3%;
+  top:5%;
+  background:var(--yellow);
+  transform:rotate(7deg);
 }
 
 .s2{
-left:-5%;
-top:35%;
-background:var(--blue);
-transform:rotate(-7deg);
-animation-delay:.8s;
+  left:-5%;
+  top:35%;
+  background:var(--blue);
+  transform:rotate(-7deg);
+  animation-delay:.8s;
 }
 
 .s3{
-right:-3%;
-bottom:17%;
-background:var(--pink);
-transform:rotate(-5deg);
-animation-delay:1.5s;
+  right:-3%;
+  bottom:17%;
+  background:var(--pink);
+  transform:rotate(-5deg);
+  animation-delay:1.5s;
 }
 
 .s4{
-left:3%;
-bottom:3%;
-background:var(--green);
-transform:rotate(5deg);
-animation-delay:2s;
+  left:3%;
+  bottom:3%;
+  background:var(--green);
+  transform:rotate(5deg);
+  animation-delay:2s;
 }
 
 @keyframes float{
-
-0%,100%{
-transform:translateY(0) rotate(-3deg);
+  0%,100%{translate:0 0}
+  50%{translate:0 -10px}
 }
 
-50%{
-transform:translateY(-10px) rotate(2deg);
+/* ---------------- MARQUEE ---------------- */
+
+.marquee{
+  overflow:hidden;
+  border-top:3px solid var(--black);
+  border-bottom:3px solid var(--black);
+  background:var(--yellow);
+  padding:15px 0;
+  white-space:nowrap;
 }
 
+.marquee-track{
+  display:inline-block;
+  animation:marquee 20s linear infinite;
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:.08em;
 }
 
+@keyframes marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
 
-/* ================= ABOUT ================= */
+/* ---------------- ABOUT ---------------- */
 
 .about{
-background:var(--blue);
-border-top:3px solid var(--black);
-border-bottom:3px solid var(--black);
+  background:var(--blue);
+  border-bottom:3px solid var(--black);
 }
 
 .about-grid{
-display:grid;
-grid-template-columns:.8fr 1.2fr;
-gap:60px;
-align-items:center;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:60px;
+  align-items:center;
 }
 
 .about-photo{
-aspect-ratio:1;
-border:3px solid var(--black);
-border-radius:40px;
-overflow:hidden;
-background:var(--yellow);
-box-shadow:11px 11px 0 var(--black);
-transform:rotate(-3deg);
+  aspect-ratio:1;
+  border:3px solid var(--black);
+  border-radius:40px;
+  overflow:hidden;
+  background:var(--yellow);
+  box-shadow:11px 11px 0 var(--black);
+  transform:rotate(-3deg);
 }
 
 .about-photo img{
-width:100%;
-height:100%;
-object-fit:cover;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 .note{
-display:inline-block;
-margin-top:25px;
-padding:12px 17px;
-background:var(--yellow);
-border:2px solid var(--black);
-border-radius:15px;
-box-shadow:4px 4px 0 var(--black);
-font-size:13px;
-font-weight:800;
-transform:rotate(2deg);
-cursor:pointer;
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 17px;
+  background:var(--yellow);
+  border:2px solid var(--black);
+  border-radius:15px;
+  box-shadow:4px 4px 0 var(--black);
+  font-size:13px;
+  font-weight:800;
+  transform:rotate(2deg);
+  cursor:pointer;
+  transition:.2s;
 }
 
+.note:active{
+  transform:rotate(2deg) scale(.96);
+}
 
-/* ================= WORKS ================= */
+/* ---------------- WORKS ---------------- */
 
 .works-grid{
-display:grid;
-grid-template-columns:repeat(12,1fr);
-gap:16px;
-margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:16px;
+  margin-top:40px;
 }
 
 .work{
-min-height:330px;
-border:3px solid var(--black);
-border-radius:28px;
-overflow:hidden;
-transition:.35s;
-cursor:pointer;
+  min-height:330px;
+  border:3px solid var(--black);
+  border-radius:28px;
+  overflow:hidden;
+  transition:.35s;
+  cursor:pointer;
+  background:#eee;
 }
 
 .work:hover{
-transform:rotate(-2deg) scale(1.025);
+  transform:rotate(-2deg) scale(1.025);
 }
 
 .work:nth-child(1){grid-column:span 7}
@@ -391,437 +413,422 @@ transform:rotate(-2deg) scale(1.025);
 .work:nth-child(4){grid-column:span 7}
 
 .work img{
-width:100%;
-height:100%;
-min-height:330px;
-object-fit:cover;
-display:block;
-transition:.5s;
+  width:100%;
+  height:100%;
+  min-height:330px;
+  object-fit:cover;
+  display:block;
+  transition:.5s;
 }
 
 .work:hover img{
-transform:scale(1.04);
+  transform:scale(1.04);
 }
 
+.work.zoomed{
+  transform:scale(1.04) rotate(1deg);
+}
 
-/* ================= SERVICES ================= */
+/* ---------------- SERVICES ---------------- */
 
 .services{
-background:var(--pink);
-border-top:3px solid var(--black);
-border-bottom:3px solid var(--black);
+  background:var(--pink);
+  border-top:3px solid var(--black);
+  border-bottom:3px solid var(--black);
 }
 
 .service-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:17px;
-margin-top:40px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+  margin-top:40px;
 }
 
 .card{
-background:var(--cream);
-border:3px solid var(--black);
-border-radius:28px;
-padding:27px;
-box-shadow:7px 7px 0 var(--black);
-transition:.3s;
+  background:var(--cream);
+  border:3px solid var(--black);
+  border-radius:28px;
+  padding:27px;
+  box-shadow:7px 7px 0 var(--black);
+  transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-7px) rotate(1deg);
+  transform:translateY(-7px) rotate(1deg);
 }
 
 .card h3{
-margin:0 0 13px;
-font-size:21px;
+  margin:0 0 13px;
+  font-size:21px;
 }
 
 .price{
-margin-top:20px;
-font-size:30px;
-font-weight:800;
+  margin-top:20px;
+  font-size:30px;
+  font-weight:800;
 }
 
 .discount{
-display:inline-block;
-margin-top:35px;
-padding:17px 22px;
-background:var(--yellow);
-border:3px solid var(--black);
-border-radius:20px;
-box-shadow:6px 6px 0 var(--black);
-font-size:20px;
-font-weight:800;
-transform:rotate(-2deg);
-cursor:pointer;
-transition:.25s;
+  display:inline-block;
+  margin-top:35px;
+  padding:17px 22px;
+  background:var(--yellow);
+  border:3px solid var(--black);
+  border-radius:20px;
+  box-shadow:6px 6px 0 var(--black);
+  font-size:20px;
+  font-weight:800;
+  transform:rotate(-2deg);
+  cursor:pointer;
+  transition:.25s;
 }
 
 .discount:hover{
-transform:rotate(2deg) scale(1.04);
+  transform:rotate(2deg) scale(1.04);
 }
 
-
-/* ================= FRIEND ================= */
+/* ---------------- FRIEND ---------------- */
 
 .friend{
-background:var(--red);
-color:white;
-border-bottom:3px solid var(--black);
-text-align:center;
+  background:var(--red);
+  color:white;
+  border-bottom:3px solid var(--black);
+  text-align:center;
 }
 
 .friend h2{
-font-size:clamp(55px,11vw,120px);
+  font-size:clamp(55px,11vw,120px);
 }
 
 .friend-text{
-max-width:650px;
-margin:0 auto 30px;
-font-size:19px;
-line-height:1.45;
-font-weight:600;
+  max-width:650px;
+  margin:0 auto 30px;
+  font-size:19px;
+  line-height:1.45;
+  font-weight:600;
 }
 
 .friend .main-button{
-background:var(--yellow);
-color:var(--black);
+  background:var(--yellow);
+  color:var(--black);
 }
 
-
-/* ================= BOOKING ================= */
+/* ---------------- BOOKING ---------------- */
 
 .booking{
-text-align:center;
+  text-align:center;
 }
 
 .booking .text{
-margin:auto;
+  margin:auto;
 }
 
 .address{
-margin:25px auto;
-font-size:16px;
-font-weight:700;
-line-height:1.6;
+  margin:25px auto;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.6;
 }
 
 .footer-socials{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-margin-top:40px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:40px;
 }
 
 .footer-socials a{
-padding:10px 17px;
-border:2px solid var(--black);
-border-radius:100px;
-background:white;
-font-weight:800;
-font-size:13px;
-transition:.2s;
+  padding:10px 17px;
+  border:2px solid var(--black);
+  border-radius:100px;
+  background:white;
+  font-weight:800;
+  font-size:13px;
+  transition:.2s;
 }
 
 .footer-socials a:hover{
-background:var(--yellow);
-transform:rotate(-3deg);
+  background:var(--yellow);
+  transform:rotate(-3deg);
 }
 
-
-/* ================= REVEAL ================= */
+/* ---------------- REVEAL ---------------- */
 
 .reveal{
-opacity:0;
-transform:translateY(35px);
-transition:opacity .8s ease,transform .8s ease;
+  opacity:0;
+  transform:translateY(35px);
+  transition:opacity .8s ease,transform .8s ease;
 }
 
 .reveal.visible{
-opacity:1;
-transform:translateY(0);
+  opacity:1;
+  transform:translateY(0);
 }
 
-
-/* ================= HEARTS ================= */
+/* ---------------- HEARTS ---------------- */
 
 .heart{
-position:fixed;
-z-index:9999;
-pointer-events:none;
-font-size:24px;
-animation:heartUp 1.4s ease-out forwards;
+  position:fixed;
+  z-index:9999;
+  pointer-events:none;
+  font-size:24px;
+  animation:heartUp 1.4s ease-out forwards;
 }
 
 @keyframes heartUp{
+  0%{
+    opacity:1;
+    transform:translate(0,0) scale(.5) rotate(0);
+  }
 
-0%{
-opacity:1;
-transform:translate(0,0) scale(.5) rotate(0);
+  100%{
+    opacity:0;
+    transform:translate(var(--x),-160px) scale(1.25) rotate(var(--r));
+  }
 }
 
-100%{
-opacity:0;
-transform:translate(var(--x),-160px) scale(1.25) rotate(var(--r));
-}
-
-}
-
-
-/* ================= HAND ================= */
+/* ---------------- HAND ---------------- */
 
 .wave-hand{
-position:fixed;
-z-index:9999;
-pointer-events:none;
-font-size:75px;
-left:50%;
-top:50%;
-transform:translate(-50%,-50%) scale(0);
-opacity:0;
+  position:fixed;
+  z-index:9999;
+  pointer-events:none;
+  font-size:75px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%) scale(0);
+  opacity:0;
 }
 
 .wave-hand.show{
-animation:wave .9s ease forwards;
+  animation:wave .9s ease forwards;
 }
 
 @keyframes wave{
+  0%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.3) rotate(-25deg);
+  }
 
-0%{
-opacity:0;
-transform:translate(-50%,-50%) scale(.3) rotate(-25deg);
+  25%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1) rotate(15deg);
+  }
+
+  50%{
+    transform:translate(-50%,-50%) scale(1) rotate(-15deg);
+  }
+
+  75%{
+    transform:translate(-50%,-50%) scale(1) rotate(12deg);
+  }
+
+  100%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.9) rotate(0);
+  }
 }
 
-25%{
-opacity:1;
-transform:translate(-50%,-50%) scale(1) rotate(15deg);
-}
-
-50%{
-transform:translate(-50%,-50%) scale(1) rotate(-15deg);
-}
-
-75%{
-transform:translate(-50%,-50%) scale(1) rotate(12deg);
-}
-
-100%{
-opacity:0;
-transform:translate(-50%,-50%) scale(.9) rotate(0);
-}
-
-}
-
-
-/* ================= TRAIN ================= */
+/* ---------------- TRAIN ---------------- */
 
 .train{
-position:fixed;
-z-index:9999;
-pointer-events:none;
-left:-140px;
-top:62%;
-font-size:48px;
+  position:fixed;
+  z-index:9999;
+  pointer-events:none;
+  left:-140px;
+  top:62%;
+  font-size:48px;
 }
 
 .train.go{
-animation:trainRide 2.3s linear forwards;
+  animation:trainRide 2.3s linear forwards;
 }
 
 @keyframes trainRide{
-
-from{
-left:-140px;
+  from{left:-140px}
+  to{left:calc(100vw + 140px)}
 }
 
-to{
-left:calc(100vw + 140px);
-}
-
-}
-
-
-/* ================= FLASH ================= */
+/* ---------------- FLASH ---------------- */
 
 .flash{
-position:fixed;
-inset:0;
-z-index:9998;
-pointer-events:none;
-background:white;
-opacity:0;
+  position:fixed;
+  inset:0;
+  z-index:9998;
+  pointer-events:none;
+  background:white;
+  opacity:0;
 }
 
 .flash.go{
-animation:cameraFlash .55s ease;
+  animation:cameraFlash .55s ease;
 }
 
 @keyframes cameraFlash{
-
-0%{
-opacity:0;
+  0%{opacity:0}
+  35%{opacity:.95}
+  100%{opacity:0}
 }
 
-35%{
-opacity:.95;
-}
-
-100%{
-opacity:0;
-}
-
-}
-
-
-/* ================= CONFETTI ================= */
+/* ---------------- CONFETTI ---------------- */
 
 .confetti{
-position:fixed;
-z-index:9999;
-pointer-events:none;
-width:9px;
-height:14px;
-animation:confettiFall 1.5s ease-out forwards;
+  position:fixed;
+  z-index:9999;
+  pointer-events:none;
+  width:9px;
+  height:14px;
+  animation:confettiFall 1.5s ease-out forwards;
 }
 
 @keyframes confettiFall{
+  0%{
+    opacity:1;
+    transform:translateY(0) rotate(0);
+  }
 
-0%{
-opacity:1;
-transform:translateY(0) rotate(0);
+  100%{
+    opacity:0;
+    transform:translate(var(--x),var(--y)) rotate(600deg);
+  }
 }
 
-100%{
-opacity:0;
-transform:translate(var(--x),var(--y)) rotate(600deg);
-}
-
-}
-
-
-/* ================= MOBILE ================= */
+/* ---------------- MOBILE ---------------- */
 
 @media(max-width:700px){
 
-section{
-padding:65px 0;
+  section{
+    padding:65px 0;
+  }
+
+  .container{
+    width:calc(100% - 24px);
+  }
+
+  .hero{
+    min-height:auto;
+    padding-top:30px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .logo{
+    font-size:24vw;
+  }
+
+  .subtitle{
+    font-size:15px;
+  }
+
+  .hero-text{
+    font-size:20px;
+  }
+
+  .socials{
+    justify-content:center;
+  }
+
+  .social{
+    width:72px;
+    height:72px;
+    font-size:10px;
+  }
+
+  .social-icon{
+    font-size:19px;
+  }
+
+  .hero-photo-wrap{
+    width:min(390px,90vw);
+  }
+
+  .s1{
+    right:0;
+  }
+
+  .s2{
+    left:0;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .about-photo{
+    max-width:390px;
+    margin:auto;
+  }
+
+  h2{
+    font-size:15vw;
+  }
+
+  .works-grid{
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+  }
+
+  .work,
+  .work:nth-child(1),
+  .work:nth-child(2),
+  .work:nth-child(3),
+  .work:nth-child(4){
+    grid-column:span 1;
+    min-height:220px;
+    border-radius:20px;
+  }
+
+  .work:nth-child(1),
+  .work:nth-child(4){
+    grid-column:span 2;
+  }
+
+  .work img{
+    min-height:220px;
+  }
+
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:23px;
+  }
+
+  .main-button{
+    width:100%;
+  }
+
+  .friend-text{
+    font-size:17px;
+  }
+
+  .wave-hand{
+    font-size:65px;
+  }
+
+  .train{
+    top:68%;
+  }
+
+  .marquee-track{
+    font-size:15px;
+  }
+
 }
 
-.container{
-width:calc(100% - 24px);
-}
+/* hide cursor effect on touch screens */
 
-.hero{
-min-height:auto;
-padding-top:30px;
-}
+@media (hover:none){
 
-.hero-grid{
-grid-template-columns:1fr;
-gap:45px;
-}
-
-.logo{
-font-size:24vw;
-}
-
-.subtitle{
-font-size:15px;
-}
-
-.hero-text{
-font-size:20px;
-}
-
-.socials{
-justify-content:center;
-}
-
-.social{
-width:72px;
-height:72px;
-font-size:10px;
-}
-
-.social-icon{
-font-size:19px;
-}
-
-.hero-photo-wrap{
-width:min(390px,90vw);
-}
-
-.s1{
-right:0;
-}
-
-.s2{
-left:0;
-}
-
-.about-grid{
-grid-template-columns:1fr;
-gap:45px;
-}
-
-.about-photo{
-max-width:390px;
-margin:auto;
-}
-
-h2{
-font-size:15vw;
-}
-
-.works-grid{
-grid-template-columns:1fr 1fr;
-gap:9px;
-}
-
-.work,
-.work:nth-child(1),
-.work:nth-child(2),
-.work:nth-child(3),
-.work:nth-child(4){
-grid-column:span 1;
-min-height:220px;
-border-radius:20px;
-}
-
-.work:nth-child(1),
-.work:nth-child(4){
-grid-column:span 2;
-}
-
-.work img{
-min-height:220px;
-}
-
-.service-grid{
-grid-template-columns:1fr;
-}
-
-.card{
-padding:23px;
-}
-
-.main-button{
-width:100%;
-}
-
-.friend-text{
-font-size:17px;
-}
-
-.wave-hand{
-font-size:65px;
-}
-
-.train{
-top:68%;
-}
+  .cursor-label{
+    display:none!important;
+  }
 
 }
 
@@ -834,9 +841,10 @@ top:68%;
 <div class="wave-hand" id="waveHand">👋</div>
 <div class="train" id="train">🚂</div>
 <div class="flash" id="flash"></div>
+<div class="cursor-label" id="cursorLabel">SOFA ✦</div>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -869,7 +877,7 @@ brows & lashes
 
 
 <a
-class="main-button"
+class="main-button booking-button"
 href="https://dikidi.net/2126919?p=0.pi"
 target="_blank"
 rel="noopener">
@@ -931,14 +939,16 @@ href="#works">
 </div>
 
 
-<div class="hero-photo-wrap reveal">
+<div
+class="hero-photo-wrap reveal"
+id="photoWrap">
 
 <div
 class="hero-photo"
 id="heroPhoto">
 
 <img
-src="images/me.jpg"
+src="/sofa-beauty/images/me.jpg"
 alt="Софа">
 
 </div>
@@ -969,8 +979,21 @@ beauty mood ✦
 </section>
 
 
+<!-- MOVING TEXT -->
 
-<!-- ================= ABOUT ================= -->
+<div class="marquee">
+
+<div class="marquee-track">
+
+BROWS ✦ LASHES ✦ BEAUTY ✦ SOFA ✦ BROWS ✦ LASHES ✦ BEAUTY ✦ SOFA ✦
+BROWS ✦ LASHES ✦ BEAUTY ✦ SOFA ✦ BROWS ✦ LASHES ✦ BEAUTY ✦ SOFA ✦
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
 
 <section class="about">
 
@@ -982,7 +1005,7 @@ beauty mood ✦
 <div class="about-photo reveal">
 
 <img
-src="images/about.jpg"
+src="/sofa-beauty/images/about.jpg"
 alt="Софа">
 
 </div>
@@ -1037,8 +1060,7 @@ id="metroNote">
 </section>
 
 
-
-<!-- ================= WORKS ================= -->
+<!-- WORKS -->
 
 <section id="works">
 
@@ -1072,38 +1094,30 @@ id="portfolioTag">
 
 
 <div class="work reveal">
-
 <img
-src="images/work1.jpg"
+src="/sofa-beauty/images/work1.jpg"
 alt="Работа Софы">
-
 </div>
 
 
 <div class="work reveal">
-
 <img
-src="images/work2.jpg"
+src="/sofa-beauty/images/work2.jpg"
 alt="Работа Софы">
-
 </div>
 
 
 <div class="work reveal">
-
 <img
-src="images/work3.jpg"
+src="/sofa-beauty/images/work3.jpg"
 alt="Работа Софы">
-
 </div>
 
 
 <div class="work reveal">
-
 <img
-src="images/work4.jpg"
+src="/sofa-beauty/images/work4.jpg"
 alt="Работа Софы">
-
 </div>
 
 
@@ -1114,8 +1128,7 @@ alt="Работа Софы">
 </section>
 
 
-
-<!-- ================= SERVICES ================= -->
+<!-- SERVICES -->
 
 <section class="services">
 
@@ -1215,7 +1228,8 @@ alt="Работа Софы">
 class="discount reveal"
 href="https://t.me/vrodes"
 target="_blank"
-rel="noopener">
+rel="noopener"
+id="discount">
 
 −10% на знакомство с мастером ✨
 
@@ -1226,8 +1240,7 @@ rel="noopener">
 </section>
 
 
-
-<!-- ================= FRIEND ================= -->
+<!-- FRIEND -->
 
 <section class="friend">
 
@@ -1261,7 +1274,7 @@ rel="noopener">
 
 
 <a
-class="main-button"
+class="main-button booking-button"
 href="https://dikidi.net/2126919?p=0.pi"
 target="_blank"
 rel="noopener">
@@ -1277,8 +1290,7 @@ rel="noopener">
 </section>
 
 
-
-<!-- ================= BOOKING ================= -->
+<!-- BOOKING -->
 
 <section class="booking">
 
@@ -1319,7 +1331,7 @@ id="meetTag">
 
 
 <a
-class="main-button"
+class="main-button booking-button"
 href="https://dikidi.net/2126919?p=0.pi"
 target="_blank"
 rel="noopener">
@@ -1361,58 +1373,37 @@ Telegram
 </section>
 
 
-
 <script>
 
+/* ================= ПЛАВНОЕ ПОЯВЛЕНИЕ ================= */
 
-/* ================= REVEAL ================= */
+const reveals=document.querySelectorAll('.reveal');
 
-const reveals =
-document.querySelectorAll('.reveal');
-
-const observer =
-new IntersectionObserver(
-
+const observer=new IntersectionObserver(
 (entries)=>{
-
 entries.forEach(entry=>{
-
 if(entry.isIntersecting){
-
 entry.target.classList.add('visible');
-
 }
-
 });
-
 },
-
-{
-threshold:.12
-}
-
+{threshold:.12}
 );
 
-reveals.forEach(el=>{
-observer.observe(el);
-});
+reveals.forEach(el=>observer.observe(el));
 
 
+/* ================= ❤️ СЕРДЕЧКИ ================= */
 
-/* ================= HEARTS ================= */
-
-const heroPhoto =
-document.getElementById('heroPhoto');
+const heroPhoto=document.getElementById('heroPhoto');
 
 heroPhoto.addEventListener('click',()=>{
 
-const rect =
-heroPhoto.getBoundingClientRect();
+const rect=heroPhoto.getBoundingClientRect();
 
 for(let i=0;i<15;i++){
 
-const heart =
-document.createElement('div');
+const heart=document.createElement('div');
 
 heart.className='heart';
 
@@ -1421,10 +1412,10 @@ heart.innerHTML=
 [Math.floor(Math.random()*5)];
 
 heart.style.left=
-(rect.left + rect.width/2) + 'px';
+(rect.left+rect.width/2)+'px';
 
 heart.style.top=
-(rect.top + rect.height/2) + 'px';
+(rect.top+rect.height/2)+'px';
 
 heart.style.setProperty(
 '--x',
@@ -1447,13 +1438,11 @@ heart.remove();
 });
 
 
-
-/* ================= HAND ================= */
+/* ================= 👋 РУКА ================= */
 
 function waveHand(){
 
-const hand =
-document.getElementById('waveHand');
+const hand=document.getElementById('waveHand');
 
 hand.classList.remove('show');
 
@@ -1472,15 +1461,13 @@ document
 .addEventListener('click',waveHand);
 
 
-
-/* ================= TRAIN ================= */
+/* ================= 🚂 ПОЕЗД ================= */
 
 document
 .getElementById('metroNote')
 .addEventListener('click',()=>{
 
-const train =
-document.getElementById('train');
+const train=document.getElementById('train');
 
 train.classList.remove('go');
 
@@ -1491,15 +1478,13 @@ train.classList.add('go');
 });
 
 
-
-/* ================= CAMERA ================= */
+/* ================= 📸 ВСПЫШКА ================= */
 
 document
 .getElementById('portfolioTag')
 .addEventListener('click',()=>{
 
-const flash =
-document.getElementById('flash');
+const flash=document.getElementById('flash');
 
 flash.classList.remove('go');
 
@@ -1507,34 +1492,51 @@ void flash.offsetWidth;
 
 flash.classList.add('go');
 
+document.querySelectorAll('.work')
+.forEach((work,index)=>{
+
+setTimeout(()=>{
+work.classList.add('zoomed');
+
+setTimeout(()=>{
+work.classList.remove('zoomed');
+},500);
+
+},index*70);
+
+});
+
 });
 
 
+/* ================= ФОТО РАБОТ ================= */
 
-/* ================= CONFETTI ON BOOKING ================= */
+document.querySelectorAll('.work')
+.forEach(work=>{
 
-const bookingButtons =
-document.querySelectorAll('.main-button');
+work.addEventListener('click',()=>{
 
-bookingButtons.forEach(button=>{
+work.classList.toggle('zoomed');
 
-button.addEventListener('click',()=>{
+});
 
-for(let i=0;i<18;i++){
+});
 
-const piece =
-document.createElement('div');
+
+/* ================= ✨ КОНФЕТТИ ================= */
+
+function confetti(){
+
+for(let i=0;i<22;i++){
+
+const piece=document.createElement('div');
 
 piece.className='confetti';
 
-piece.style.left=
-'50vw';
+piece.style.left='50vw';
+piece.style.top='50vh';
 
-piece.style.top=
-'50vh';
-
-piece.style.background=
-[
+piece.style.background=[
 '#ff8fc7',
 '#79dcff',
 '#ffe45c',
@@ -1544,12 +1546,12 @@ piece.style.background=
 
 piece.style.setProperty(
 '--x',
-((Math.random()-.5)*500)+'px'
+((Math.random()-.5)*550)+'px'
 );
 
 piece.style.setProperty(
 '--y',
-((Math.random()-.2)*450)+'px'
+((Math.random()-.2)*500)+'px'
 );
 
 document.body.appendChild(piece);
@@ -1560,7 +1562,116 @@ piece.remove();
 
 }
 
+}
+
+
+/* ================= ЗАПИСЬ ================= */
+
+document
+.querySelectorAll('.booking-button')
+.forEach(button=>{
+
+button.addEventListener('click',confetti);
+
 });
+
+
+/* ================= СКИДКА ================= */
+
+document
+.getElementById('discount')
+.addEventListener('click',confetti);
+
+
+/* ================= 💕 СЕРДЕЧКИ НА "ДО ВСТРЕЧИ" ================= */
+
+document
+.getElementById('meetTag')
+.addEventListener('click',()=>{
+
+for(let i=0;i<7;i++){
+
+const heart=document.createElement('div');
+
+heart.className='heart';
+
+heart.innerHTML='♡';
+
+heart.style.left=
+(45+Math.random()*10)+'vw';
+
+heart.style.top='50vh';
+
+heart.style.setProperty(
+'--x',
+((Math.random()-.5)*180)+'px'
+);
+
+heart.style.setProperty(
+'--r',
+((Math.random()-.5)*60)+'deg'
+);
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},1500);
+
+}
+
+});
+
+
+/* ================= 🖱️ ЖИВОЙ КУРСОР ================= */
+
+const cursorLabel=
+document.getElementById('cursorLabel');
+
+if(window.matchMedia('(hover:hover)').matches){
+
+document.addEventListener('mousemove',(e)=>{
+
+cursorLabel.style.position='fixed';
+cursorLabel.style.left=(e.clientX+15)+'px';
+cursorLabel.style.top=(e.clientY+15)+'px';
+
+});
+
+}
+
+
+/* ================= 🪩 ПАРАЛЛАКС ФОТО ================= */
+
+const photoWrap=
+document.getElementById('photoWrap');
+
+if(window.matchMedia('(hover:hover)').matches){
+
+document.addEventListener('mousemove',(e)=>{
+
+const x=(e.clientX/window.innerWidth-.5)*10;
+const y=(e.clientY/window.innerHeight-.5)*10;
+
+photoWrap.style.transform=
+`translate(${x}px,${y}px)`;
+
+});
+
+}
+
+
+/* ================= ЗАЩИТА ОТ ЗАВИСАНИЯ ЭФФЕКТОВ ================= */
+
+window.addEventListener('load',()=>{
+
+setTimeout(()=>{
+
+reveals.forEach(el=>{
+el.classList.add('visible');
+});
+
+},400);
 
 });
 
